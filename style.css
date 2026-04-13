@@ -1,0 +1,23 @@
+body {
+    background-color: #dd0f0f98;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.contador-container {
+    text-align: center;
+    background: #dd0f0f98;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+span {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 10px;
+}
