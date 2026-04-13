@@ -1,0 +1,10 @@
+# Extensões de sistema
+.DS_Store
+Thumbs.db
+
+# Configurações do VS Code
+.vscode/
+
+# Logs e arquivos temporários
+*.log
+npm-debug.log*
