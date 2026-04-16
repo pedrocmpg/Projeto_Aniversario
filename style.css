@@ -21,3 +21,50 @@ span {
     font-weight: bold;
     margin: 10px;
 }
+.coracao-animado {
+    font-size: 60px;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    animation: pulsar 1.2s infinite ease-in-out;
+}
+
+@keyframes pulsar {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); filter: drop-shadow(0 0 10px #ff4d4d); }
+    100% { transform: scale(1); }
+}
+
+
+.card-declaracao {
+    background: rgba(255, 255, 255, 0.4); 
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    text-align: center;
+}
+
+
+body {
+    background-color: #fce4ec; 
+    overflow-x: hidden;
+    position: relative;
+}
+
+.estrela {
+    position: absolute;
+    bottom: -20px;
+    width: 4px;
+    height: 4px;
+    background: #ff80ab;
+    border-radius: 50%;
+    animation: subir 4s linear infinite;
+    z-index: -1;
+}
+
+@keyframes subir {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-100vh); opacity: 0; }
+}
