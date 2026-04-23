@@ -1,38 +1,74 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feliz Aniversário, Meu amor 🌸</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="contador-container">
-        <h1>Nosso tempo Juntos</h1>
-        <span id="meses">00</span>
-        <span id="dias">00</span>
-        <span id="horas">00</span>
-        <span id="minutos">00</span>
-        <span id="segundos">00</span>
-    </div>
-    <div class="mensagem-container">
-        <p id="texto-mensagem">Cada segundo ao seu lado é especial! ❤️</p>
-        <button id="btn-mensagem">Uma frase especial!</button>
-    </div>
-    
-    <div class="coracao-animado">❤️</div>
 
-    <div class="card-declaracao">
-        <h3>Gerador de Declarações 💕</h3>
-        
-        <p id="texto-declaracao">"Clique no botão para ler o que sinto por você..."</p>
-        
-        <button id="btn-nova-frase">
-            <span>💌</span> NOVA FRASE DE AMOR
-        </button>
-    </div>
+  <!-- Partículas de fundo -->
+  <div class="particles" id="particles"></div>
 
-<div id="container-estrelas"></div>
-<script src="scripts.js"></script>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="subtitle">Hoje é um dia muito especial</p>
+      <h1 class="title">Feliz Aniversário,<br /><span>Minha Princesinha</span></h1>
+      <p class="date">21 de Maio</p>
+      <div class="divider"></div>
+    </div>
+  </section>
+
+  <!-- Foto Principal -->
+  <section class="photo-section">
+    <div class="photo-wrapper">
+      <div class="photo-frame">
+        <!-- Substitua o src pela foto da Sofia -->
+        <img src="foto.jpg" alt="Sofia Schuster" class="main-photo" onerror="this.style.display='none'; document.getElementById('photo-placeholder').style.display='flex';" />
+        <div id="photo-placeholder" class="photo-placeholder">
+          <span>🌸</span>
+          <p>Adicione a foto da Sofia aqui<br /><small>Renomeie sua foto para <strong>foto.jpg</strong> e coloque na mesma pasta</small></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mensagem -->
+  <section class="message-section">
+    <div class="message-card">
+      <p class="message-label">Com todo o meu amor</p>
+      <p class="message-text">
+        O mundo fica mais bonito porque você existe nele.<br /><br />
+        Cada dia ao seu lado é uma lembrança que quero guardar para sempre.
+        Você ilumina tudo ao redor com o seu sorriso, com a sua leveza,
+        com tudo que você é.<br /><br />
+        Que esse novo ano da sua vida seja cheio de alegria, de conquistas
+        e de momentos incríveis — e que eu possa estar ao seu lado em cada um deles.<br /><br />
+        <em>Te amo muito, Minha vidaaa. 🌸</em>
+      </p>
+    </div>
+  </section>
+
+  <!-- Contagem regressiva / data -->
+  <section class="countdown-section">
+    <p class="countdown-label">Meuu bemmm, está chegando novos momentos emm:</p>
+    <div class="countdown" id="countdown">
+      <div class="count-box"><span id="days">--</span><small>dias</small></div>
+      <div class="count-box"><span id="hours">--</span><small>horas</small></div>
+      <div class="count-box"><span id="minutes">--</span><small>minutos</small></div>
+      <div class="count-box"><span id="seconds">--</span><small>segundos</small></div>
+    </div>
+    <p class="birthday-msg" id="birthday-msg" style="display:none;">🎂 Hoje é o grande dia! Feliz Aniversário, MInha Princesaaaa, aproveitaaa! 🎂</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Feito com 💗 especialmente para você</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
