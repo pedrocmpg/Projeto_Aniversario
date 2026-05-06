@@ -3,13 +3,13 @@ function updateCountdown() {
   const now = new Date();
   const currentYear = now.getFullYear();
 
-  let birthday = new Date(currentYear, 4, 21, 0, 0, 0); // mês 4 = maio (0-indexed)
+  let birthday = new Date(currentYear, 4, 22, 0, 0, 0); // mês 4 = maio (0-indexed)
 
   // Se já passou este ano, conta para o próximo
   if (now >= birthday) {
     // Verifica se é exatamente hoje
     const isToday =
-      now.getDate() === 21 &&
+      now.getDate() === 22 &&
       now.getMonth() === 4 &&
       now.getFullYear() === currentYear;
 
@@ -20,7 +20,7 @@ function updateCountdown() {
       return;
     }
 
-    birthday = new Date(currentYear + 1, 4, 21, 0, 0, 0);
+    birthday = new Date(currentYear + 1, 4, 22, 0, 0, 0);
   }
 
   const diff = birthday - now;
