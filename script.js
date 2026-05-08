@@ -3,13 +3,13 @@ function updateCountdown() {
   const now = new Date();
   const currentYear = now.getFullYear();
 
-  let birthday = new Date(currentYear, 4, 21, 0, 0, 0); // mês 4 = maio (0-indexed)
+  let birthday = new Date(currentYear, 4, 8, 0, 0, 0); // mês 4 = maio (0-indexed)
 
   // Se já passou este ano, conta para o próximo
   if (now >= birthday) {
     // Verifica se é exatamente hoje
     const isToday =
-      now.getDate() === 21 &&
+      now.getDate() === 8 &&
       now.getMonth() === 4 &&
       now.getFullYear() === currentYear;
 
@@ -20,7 +20,7 @@ function updateCountdown() {
       return;
     }
 
-    birthday = new Date(currentYear + 1, 4, 21, 0, 0, 0);
+    birthday = new Date(currentYear + 1, 4, 8, 0, 0, 0);
   }
 
   const diff = birthday - now;
@@ -37,7 +37,7 @@ function updateCountdown() {
 }
 
 updateCountdown();
-setInterval(updateCountdown, 1000);
+setInterval(updateCountdown, 500);
 
 // Partículas flutuantes
 const emojis = ['🌸', '💗', '✨', '🌷', '💕', '🌺', '💖'];
@@ -54,12 +54,12 @@ function createParticle() {
   el.style.animationDelay = Math.random() * 5 + 's';
   container.appendChild(el);
 
-  setTimeout(() => el.remove(), (duration + 5) * 1000);
+  setTimeout(() => el.remove(), (duration + 5) * 900);
 }
 
 // Cria partículas periodicamente
 for (let i = 0; i < 15; i++) createParticle();
-setInterval(createParticle, 1200);
+setInterval(createParticle, 1000);
 
 // Estrelas caindo
 function createStar() {
@@ -78,7 +78,7 @@ function createStar() {
 
 // Cria estrelas periodicamente
 for (let i = 0; i < 25; i++) {
-  setTimeout(createStar, Math.random() * 3000);
+  setTimeout(createStar, Math.random() * 1000);
 }
 setInterval(createStar, 600);
 
